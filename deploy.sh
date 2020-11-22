@@ -6,9 +6,9 @@ docker push emilystacyandroid/multi-client:latest
 docker push emilystacyandroid/multi-server:latest
 docker push emilystacyandroid/multi-worker:latest
 
-docker push emilystacyandroid/multi-client:latest:$SHA
-docker push emilystacyandroid/multi-server:latest:$SHA
-docker push emilystacyandroid/multi-worker:latest:$SHA
+docker push emilystacyandroid/multi-client:$SHA
+docker push emilystacyandroid/multi-server:$SHA
+docker push emilystacyandroid/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=emilystacyandroid/multi-server:$SHA
